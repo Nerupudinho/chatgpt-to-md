@@ -1,0 +1,28 @@
+#cgpt-md-download-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  background: #10a37f;   /* ChatGPT green */
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+  transition: background 0.15s, transform 0.1s;
+}
+
+#cgpt-md-download-btn:hover {
+  background: #0d8c6d;
+}
+
+#cgpt-md-download-btn:active {
+  transform: scale(0.97);
+}
