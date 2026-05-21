@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "AI Chat to Markdown",
+  "version": "1.0",
+  "description": "Download any ChatGPT or Claude conversation as a .md file",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {}
+}
