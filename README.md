@@ -1,32 +1,50 @@
 # ChatGPT to Markdown
 
-A Chrome extension that exports ChatGPT conversations as clean markdown files. One click to save any conversation locally.
+A Chrome extension that exports ChatGPT conversations as clean Markdown files. One click to download any conversation locally.
 
-## What it does
+## What It Does
 
-Injects a **Download as Markdown** button into ChatGPT's UI. Click it to get a `.md` file with the full conversation — clean formatting, ready to use in Obsidian, Claude Code context, or any second-brain tool.
+Adds a **Download .md** button to ChatGPT's interface. Click it to save the current conversation as a properly formatted Markdown file—ready for Obsidian, Notion, or any text editor.
 
-## Why
+## Features
 
-ChatGPT conversations are trapped in the browser with no native export. This bridges ChatGPT output into local AI workflows — feed yesterday's conversation as context for today's build session.
+- Exports the full conversation with speaker labels (**You** / **ChatGPT**)
+- Preserves code blocks with syntax highlighting markers
+- Handles lists, tables, links, and other formatting
+- Works on both `chatgpt.com` and `chat.openai.com`
+- Zero configuration required
 
 ## Install
 
-1. Go to `chrome://extensions/`
-2. Enable **Developer mode** (top right)
-3. Click **Load unpacked**
-4. Select this folder
+### From Source (Developer Mode)
 
-## Stack
+1. Clone or download this repository
+2. Open `chrome://extensions/` in Chrome
+3. Enable **Developer mode** (top right toggle)
+4. Click **Load unpacked**
+5. Select the repository folder
 
-Chrome Extension (Manifest V3) · JavaScript · CSS
+The green **Download .md** button appears in the bottom-right corner of any ChatGPT conversation.
+
+## Privacy
+
+This extension runs entirely in your browser. Conversations are processed locally and saved directly to your device. No data is collected or transmitted. See [PRIVACY.md](PRIVACY.md) for details.
 
 ## Files
 
 ```
 chatgpt-to-md/
-├── manifest.json    # Extension config (Manifest V3)
-├── content.js       # Injects download button into ChatGPT
-├── styles.css       # Button styling
-└── icon.png         # Extension icon
+├── manifest.json     # Extension config (Manifest V3)
+├── content.js        # Injects button, converts HTML to Markdown
+├── styles.css        # Button styling
+├── icon16.png        # Toolbar icon
+├── icon48.png        # Extensions page icon
+├── icon128.png       # Chrome Web Store icon
+├── LICENSE           # MIT License
+├── PRIVACY.md        # Privacy policy
+└── store/            # Chrome Web Store submission assets
 ```
+
+## License
+
+MIT License — see [LICENSE](LICENSE)
